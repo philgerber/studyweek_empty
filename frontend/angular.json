@@ -14,6 +14,18 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "fahrplan-app:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "fahrplan-app:build:production"
+            }
+          }
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
@@ -28,6 +40,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -63,17 +76,6 @@
             }
           }
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "fahrplan-app:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "fahrplan-app:build:production"
-            }
-          }
-        },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
@@ -92,6 +94,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +126,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "fahrplan-app"
 }

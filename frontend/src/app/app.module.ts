@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { ListComponent } from './list/list.component';
+import { InfoComponent } from './info/info.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatListModule} from '@angular/material/list';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    ListComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

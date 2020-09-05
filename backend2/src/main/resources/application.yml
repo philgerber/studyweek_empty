@@ -1,0 +1,19 @@
+spring:
+  main:
+    banner-mode: off
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    initialization-mode: always
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/studyweek
+    username: admin
+    password: admin
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
