@@ -18,6 +18,3 @@ create table shop
 );
 
 COPY shop FROM '/docker-entrypoint-initdb.d/shops_bak.csv' DELIMITER ';' CSV HEADER;
-
--- insert into "Shop" values('ss','ss','ss','ss','ss','ss','ss','ss','ss','ss','ss','ss','ss')
-

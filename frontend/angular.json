@@ -17,8 +17,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fahrplan-app:build",
-            "proxyConfig": "src/proxy.conf.json"
+            "browserTarget": "fahrplan-app:build"
           },
           "configurations": {
             "production": {
@@ -128,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "fahrplan-app"
+  "defaultProject": "fahrplan-app",
+  "cli": {
+    "analytics": "6408cb22-92c0-40e6-ae1a-7ca374e8a388"
+  }
 }
